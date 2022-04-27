@@ -10,7 +10,7 @@ Given the length of three sides the program will calculate wether a triangle is:
 
 1) It is currently fully operational with the deployed backend and accessible on: http://138.68.69.204:4200/
 2) cd into the triangleFrontend folder and run "ng serve" - You must have npm and angular installed to do the second option
-3) A Dockerfile has been created for the deployment, simply cd into the folder and build the image. Port which is exposed is: 80
+3) A Dockerfile has been created for the deployment, simply cd into the folder and build the image. Port which is exposed is: 80. If you choose this option please read the docker description at the bottom of the document.
 
 ## Backend
 - Rest API built in Java Spring Boot
@@ -32,8 +32,9 @@ Given the length of three sides the program will calculate wether a triangle is:
 - Ways of trying the backend:
 
 1) It is deployed on http://138.68.69.204:4201/triangle
-2) A Dockerfile has been created for the deployment, simply cd into the folder and build the image. Port which is exposed is: 8080
-3) It is a maven project and can be started in IDE's. I used VS-Code/IntelliJ so it should work out of the box. It will deploy on localhost:8080
+2) It is a maven project and can be started in IDE's. I used VS-Code/IntelliJ so it should work out of the box. It will deploy on localhost:8080
+3) A Dockerfile has been created for the deployment, simply cd into the folder and build the image. Port which is exposed is: 8080. If you choose this option please read the docker description at the bottom of the document.
+
 
 
 
@@ -46,3 +47,5 @@ Should you choose to build the docker images and run the program through docker,
 docker run -d --name trifront -p 4200:80 "INSERT DOCKER IMAGE TAG"
 
 docker run -d --name triback -p 4201:8080 "INSERT DOCKER IMAGE TAG"
+
+The frontend will now be available on localhost:4200 and the backend on localhost:4201
