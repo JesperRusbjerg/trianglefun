@@ -9,7 +9,7 @@ Given the length of three sides the program will calculate wether a triangle is:
 - Ways of accesing the Frontend:
 
 1) It is currently fully operational with the deployed backend and accessible on: http://138.68.69.204:4200/
-2) cd into the triangleFrontend folder and run "ng serve" - You must have npm and angular installed to do the second option
+2) cd into the triangleFrontend folder and run "npm install" followed by "ng serve" - You must have npm and angular installed to do the second option
 3) A Dockerfile has been created for the deployment, simply cd into the folder and build the image. Port which is exposed is: 80. If you choose this option please read the docker description at the bottom of the document.
 
 ## Backend
