@@ -32,7 +32,7 @@ Given the length of three sides the program will calculate wether a triangle is:
 - Ways of trying the backend:
 
 1) It is deployed on http://138.68.69.204:4201/triangle
-2) It is a maven project and can be started in IDE's. I used VS-Code/IntelliJ so it should work out of the box. It will deploy on localhost:8080
+2) It is a maven project and can be started in IDE's/command line through the jar file. It will deploy on localhost:8080
 3) A Dockerfile has been created for the deployment, simply cd into the folder and build the image. Port which is exposed is: 8080. If you choose this option please read the docker description at the bottom of the document.
 
 
