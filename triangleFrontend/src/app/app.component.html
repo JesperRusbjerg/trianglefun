@@ -1,0 +1,40 @@
+<h1>Hello, on this site you can tell what kind of triangle you have built based on 3 sides!</h1>
+
+<div>
+    <div>
+        <p>Make a triangle! Plesae enter the 3 sides below</p>
+      <label>A-side: </label>
+      <input [(ngModel)]="triangleMaker.aside" />
+      <label>B-side: </label>
+      <input [(ngModel)]="triangleMaker.bside" />
+      <label>C-side: </label>
+      <input [(ngModel)]="triangleMaker.cside" />
+    </div>
+    <div>
+      <br/><button (click)="addTriangle()">Calculate</button><br/>
+      
+      <p>{{error}}</p>
+      
+    </div>
+  </div>
+   
+  <br/>
+  <b><h2>The table below will display the results you produce, a history of triangles!</h2></b>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>A-side</th>
+        <th>B-side</th>
+        <th>C-side</th>
+        <th>Triangle Definition-Server-Response</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let triangle of triangles;">
+        <td>{{triangle.aside}}</td>
+        <td>{{triangle.bside}}</td>
+        <td>{{triangle.cside}}</td>
+        <td>{{triangle.triangleDefinition}}</td>
+      </tr>
+    </tbody>
+  </table>

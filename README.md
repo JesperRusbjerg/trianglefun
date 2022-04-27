@@ -1,1 +1,47 @@
-hejsay
+# Project description
+
+## Program
+Given the length of three sides the program will calculate wether a triangle is: scalene, equilateral, isosceles or "not a triangle"
+
+## Frontend
+- Frontend built in Angular
+- Connects directly to the backend - Dependant on which way the backend is deployed you can configure the base Url in the "api.service.ts" file. By default it connects to the backend running in the cloud
+- Ways of accesing the Frontend:
+
+1) It is currently fully operational with the deployed backend and accessible on: http://138.68.69.204:4200/
+2) cd into the triangleFrontend folder and run "ng serve" - You must have npm and angular installed to do the second option
+
+## Backend
+- Rest API built in Java Spring Boot
+- Has a single POST endpoint on /triangle
+- Expects following JSON-input in body:
+  
+  {
+
+    "aside": number,
+
+    "bside": number,
+
+    "cside": number,
+
+    "triangleDefinition": ""
+  
+  }
+- The backend is found in the triangleBackendd folder
+- Ways of trying the backend:
+
+1) It is deployed on http://138.68.69.204:4201/triangle
+2) A Dockerfile has been created for the deployment, simply cd into the folder and build the image. Port which is exposed is: 8080
+3) It is a maven project and can be started in IDE's. I used VS-Code/IntelliJ so it should work out of the box. It will deploy on localhost:8080
+
+
+
+## Docker
+
+Change the url in the frontend in the "api.service.ts" file to the docker url (Description of how to do so is in the file)
+
+Should you choose to build the docker images and run the program through docker, simply build the images and then run the following commands:
+
+docker run -d --name trifront -p 4200:80 "INSERT DOCKER IMAGE TAG"
+
+docker run -d --name triback -p 4201:8080 "INSERT DOCKER IMAGE TAG"
